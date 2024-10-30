@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF34F680-D96A-4466-9B04-12AD2E967316}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Lab5</RootNamespace>
+    <AssemblyName>Lab5</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LogInRegistration\CHECK_LOGIN.cs" />
+    <Compile Include="LoginRegistrationInterfaces\ICheck.cs" />
+    <Compile Include="LoginRegistrationInterfaces\IReturn.cs" />
+    <Compile Include="LoginRegistrationInterfaces\ISave.cs" />
+    <Compile Include="LogInRegistration\LOGIN_DATA.cs" />
+    <Compile Include="LogInRegistration\LOGIN_ENTITY.cs" />
+    <Compile Include="LogInRegistration\REGISTRATION_CHECK.cs" />
+    <Compile Include="LogInRegistration\SAVE_DATA.cs" />
+    <Compile Include="SupportInterfaces\IIDgenerator.cs" />
+    <Compile Include="UserActionHandler\USER_ACTION_HANDLER.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SupportInterfaces\IGetIssueData.cs" />
+    <Compile Include="SupportInterfaces\IRedirectableToSolver.cs" />
+    <Compile Include="SupportInterfaces\IReturnForSupport.cs" />
+    <Compile Include="SupportInterfaces\ISendIssueData.cs" />
+    <Compile Include="SupportInterfaces\IIssueSolverable.cs" />
+    <Compile Include="SupportInterfaces\IStatusManager.cs" />
+    <Compile Include="UserInterface\UserInterface.cs" />
+    <Compile Include="UserSupport\GET_ISSUE_DATA.cs" />
+    <Compile Include="UserSupport\ID_GENERATOR.cs" />
+    <Compile Include="UserSupport\ISSUE_SOLVER.cs" />
+    <Compile Include="UserSupport\KEY_DATA_ENTITY.cs" />
+    <Compile Include="UserSupport\REDIRECT_TO_SOLVER.cs" />
+    <Compile Include="UserSupport\SEND_ISSUE_DATA.cs" />
+    <Compile Include="UserSupport\PAYMENT_ISSUES.cs" />
+    <Compile Include="UserSupport\REQUEST_ENTITY.cs" />
+    <Compile Include="UserSupport\STATUS_MANAGER.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
